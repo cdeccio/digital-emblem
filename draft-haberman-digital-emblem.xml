@@ -17,6 +17,12 @@
         <email>brian@innovationslab.net</email>
       </address>
    </author>
+   <author fullname="Allison Mankin" initials="A." surname="Mankin">
+      <organization abbrev="PCH">Packet Clearing House</organization>
+      <address>
+         <email>amankin@gmail.com</email>
+      </address>
+   </author>
 
    <abstract>
    <t>In the physical realm, the Red Cross, Red Crescent, and Red Crystal signify protections
