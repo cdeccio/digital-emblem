@@ -65,12 +65,13 @@
    </section>
 
    <section title="Protocol Overview">
-   <t>This approach allows humanitarian organizations to protect the digital assets it uses to fulfill its mission.
+   <t> The objective of the protocol is to allow humanitarian organizations to signal that digital assets are use 
+   to fulfill its mission and therefore are entitled to protection from attack under IHL.
    These assets include both physical and virtual resources (servers, virtual machines, etc.) and network traffic
    associated with those resources. This is accomplished by associating a digital emblem attribute with the DNS
    domain name, or sub-domain, and/or with the IP address(es) associated with those resource(s).</t>
 
-   <t>The following sub-sections describe the three parties associated with the digital emblem.</t>
+   <t>The following sub-sections describe the three parties associated with the digital emblem and their roles in creating an emblem.</t>
 
    <section title="Actors">
 
@@ -93,8 +94,8 @@
 
    <section title="Observers">
    <t>An Observer is any entity that wishes to assess the claim of protection under the digital emblem. This is accomplished
-   by obtaining both the Digital Emblem Record associated with a target system (domain name or IP address) and the signing
-   certificate associated with the Approver identified in the Digital Emblem Record. An Observer then uses the key material
+   by obtaining both the Digital Emblem Record associated with a target system (domain name or IP address) published by the Requestor
+   and the signing certificate associated with the Approver that is identified in the Digital Emblem Record. An Observer then uses the key material
    in the signing certificate to verify the cryptographic material published in the target's Digital Emblem Record (Section
    <xref target="verify"/>).</t>
    </section>
