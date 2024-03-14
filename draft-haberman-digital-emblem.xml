@@ -9,7 +9,7 @@
 <?rfc inline="yes"?>
 <rfc category="std" docName="draft-haberman-digital-emblem-00" ipr="trust200902">
  <front>
-   <title abbrev="Digital Emblem">A Digital Emblem for Protected Humanitarian Efforts</title>
+   <title abbrev="Digital Emblems">Digital Emblems Indicating Protections Under International Law</title>
 
    <author fullname="Brian Haberman" initials="B." surname="Haberman" role="editor">
       <organization abbrev="JHU APL">Johns Hopkins University Applied Physics Lab</organization>
@@ -23,50 +23,99 @@
          <email>amankin@gmail.com</email>
       </address>
    </author>
+   <author fullname="Bill Woodcock" initials="B." surname="Woodcock">
+      <organization abbrev="PCH">Packet Clearing House</organization>
+      <address>
+         <email>woody@pch.net</email>
+      </address>
+   </author>
+   <author fullname="Casey Deccio" initials="C." surname="Deccio">
+      <organization abbrev="BYU">Brigham Young University</organization>
+      <address>
+         <email>casey@deccio.net</email>
+      </address>
+   </author>
+   <author fullname="Antonio DeSimone" initials="A." surname="DeSimone">
+      <organization abbrev="JHU APL">Johns Hopkins University Applied Physics Lab</organization>
+      <address>
+         <email>antonio.desinome@jhuapl.edu</email>
+      </address>
+   </author>
 
    <abstract>
-   <t>In the physical realm, the Red Cross, Red Crescent, and Red Crystal signify protections
-   under International Humanitarian Law. Today, a vast majority of humanitarian organizations rely
-   on Internet connectivity to carry out their mission. This document describes a digital version
-   of the protective emblem that will provide robust signals to digital actors of a resources protection
-   under International Humanitarian Law.</t>
+   <t>International law defines a number of emblems, such as the blue helmets of United Nations peacekeeping forces,
+   the blue and white shield of UNESCO, and the Red Cross of the International Committee of the Red Cross, as indicative
+   of special protections under the Geneva Conventions. Similar protections attach to journalists who wear "Press" protective
+   emblems on the battlefield, under Article 79 of Protocol I of the Geneva Conventions and Resolution 2222 of the United
+   Nations Security Council. The emblems of national governments and inter-governmental organizations protect diplomatic
+   pouches, couriers, and envoys under the Vienna Convention on Diplomatic Relations. Other marks enjoy protections against
+   mis-use under the Paris Convention, the Madrid Protocol, and the Trade-Related Aspects of Intellectual Property Rights.</t>
 
+   <t>Such physical emblems have a number of weaknesses (e.g., no real-time evaluation of their authenticity) and do not
+   translate to the digital realm. This document describes a digital emblem which addresses the shortcomings of the physical
+   emblems and makes possible the indication of protections of digital assets under international law.</t>
    </abstract>
  </front>
 
  <middle>
    <section anchor="intro" title="Introduction">
 
-   <t>In the physical realm, the Red Cross, Red Crescent, and Red Crystal signify protections
-   under International Humanitarian Law. Today, a vast majority of humanitarian organizations rely
-   on Internet connectivity to carry out their mission. This document describes a digital version
-   of the protective emblem that will provide robust signals to digital actors of a resources protection
-   under International Humanitarian Law.</t>
+   <t>International law defines a number of emblems, such as the blue helmets of United Nations (UN) peacekeeping forces,
+   the blue and white shield of UNESCO, and the Red Cross of the International Committee of the Red Cross (ICRC), as indicative
+   of special protections under international law. Similar protections attach to journalists who wear "Press" protective
+   emblems on the battlefield. The emblems of national governments and inter-governmental organizations protect diplomatic
+	   pouches, couriers, and envoys, and international law protects certain marks against counterfeiting.</t>
 
-   <t>Protecting digital assets requires a number of critical capabilities:
+   <t>Physical emblems suffer from a number of weaknesses:
    <list style="bullets">
-      <t>The protected status is visible</t>
-      <t>The signal of protection comes from a trusted entity</t>
-      <t>The signal of protection cannot be modified by third parties</t>
-      <t>The querying of the protective status of an entity does not adversely affect that entity.</t>
+	   <t>It is not possible to evaluate their authenticity in real-time,</t>
+	   <t>They are not amenable to machine readability,</t>
+	   <t>They cannot be seen in the dark,</t>
+	   <t>They may not be visible at a distance, at an oblique angle, or from the opposite side of an object,</t>
+	   <t>They may be subject to wear, obfuscation, or vandalism,</t>
+	   <t>No audit mechanism exists to prove that the presence of an emblem has been queried for,</t>
+	   <t>No mechanism exists to prevent replay attacks,</t>
+	   <t>No mechanism exists to prevent time-shifting attacks,</t>
+	   <t>No mechanism exists to prevent location-shifting attacks,</t>
+	   <t>No mechanism exists to correlate an emblem with a specific quantity of persons or items, or a physical extent,</t>
+	   <t>No mechanism exists to correlate the validity of an emblem with its use in a specific place or time,</t>
+	   <t>There is no centralized ability to revoke instances of emblems which have been compromised, are being abused, or are no longer relevant.</t>
+   </list></t>
+
+   <t>A digital emblem must meet certain criteria to perform its function of notification under law:
+   <list style="bullets">
+	   <t>It MUST provide a clearly detectable and unambiguous marking,</t>
+	   <t>The emblem MUST identify the authorizing party that issued it,</t>
+	   <t>The emblem MUST be robust against misuse,</t>
+	   <t>It MUST be possible to restrict the validity of an emblem by temporal or geographic scope,</t>
+	   <t>It MUST be possible to associate the emblem with a range or specific quantity of persons or items,</t>
+	   <t>It MUST be possible to associate the emblem with online services (e.g., websites, emails),</t>
+	   <t>It MUST be possible to associate the emblem with data in transit or at rest,</t>
+	   <t>It MUST be possible to associate the emblem with network-addressable equipment (e.g., routers, servers),</t>
+	   <t>It MUST be possible to associate the emblem with a physical object (e.g., building, vehicle),</t>
+	   <t>It MUST be possible to associate the emblem with a person or group of people,</t>
+	   <t>It SHOULD be possible to view an emblem in-band via a communications network, optically (e.g., QR code), or wirelessly (e.g., RFID),</t>
+	   <t>The digital emblem MUST be capable of carrying a visual representation of the emblem,</t>
+	   <t>The emblem MUST carry an unambiguous indication of the international law or laws conferring protection upon the entity marked with the emblem,</t>
+	   <t>The emblem MUST be capable of providing a reference to additional relevant information (e.g., photographs, unique identifiers) which can be
+		   used to corroborate the association of the digital emblem with the entity bearing it,</t>
+	   <t>Querying the existence of or validating a digital emblem MUST NOT impose undue risk or cost on any party to the transaction.</t>
    </list></t>
 
    <t>This document describes a protocol for the creation and publication of a digital emblem utilizing the
-   Domain Name System (DNS) global infrastructure. This protocol is modeled after Sender Policy Framework (SPF)
-   that is utilized to authorize e-mail senders within a domain <xref target="RFC7208" />.</t>
+   Domain Name System (DNS) global infrastructure.</t>
 
+   <section title="Conventions">
    <t>The capitalized key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
    "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in
    <xref target="RFC2119" />.</t>
    </section>
-
-   <section title="Protecting Humanitarian Missions">
-   <t>TODO : Intro material on protective and indicative use of the emblem</t>
    </section>
 
    <section title="Protocol Overview">
-   <t> The objective of the protocol is to allow humanitarian organizations to signal that digital assets are use 
-   to fulfill its mission and therefore are entitled to protection from attack under IHL.
+   <t><strong>The remaining sections and text are placefolders based on the early prototype work</strong></t>
+   <t> The objective of the protocol is to allow organizations to digitally signal that assets are
+   entitled to protection from attack under law.
    These assets include both physical and virtual resources (servers, virtual machines, etc.) and network traffic
    associated with those resources. This is accomplished by associating a digital emblem attribute with the DNS
    domain name, or sub-domain, and/or with the IP address(es) associated with those resource(s).</t>
