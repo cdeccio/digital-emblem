@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "dns-emblem"
+version = "0.1.0"
+description = ""
+authors = ["Rohan Marangoly <rohan.marangoly@jhuapl.edu>"]
+maintainers = ["Nivesh Varma <nivesh.varma@jhuapl.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dnspython = "^2.4.2"
+cryptography = "^41.0.4"
+flask = "^2.3.3"
+flask-jwt-extended = "^4.5.2"
+pyjwt = "^2.8.0"
+requests = "^2.31.0"
+plac = "^1.4.0"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "fpho"
+url = "https://files.pythonhosted.org"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+jedi = "^0.19.1"
+ipython = "^8.23.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
