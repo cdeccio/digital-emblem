@@ -12,8 +12,8 @@
 
 CyberNorms is funded internally accross AOS and NSAD. The goal of the project is to support humanitarian and relief organizations as well as establishing internet standards. The digital emblem serves as an indicator to malicious parties that the ICRC, or any hospital, is a non-partisan entity and is just trying to help people.
 
-
 ## Workflow
+
  ____NOTE: Since the original workflow section was written, it was determined that the requestor would publish a TLSA
  record referring to an EE-cert signed by the approver (CA) in-lieu of a signed TXT record.____
  __In light of this, the workflow is currently undegoing several changes [listed below](#pending-changes-to-the-workflow)__
@@ -26,6 +26,7 @@ CyberNorms is funded internally accross AOS and NSAD. The goal of the project is
 ~~1. Additionally, there's a verification script, which takes the nonce and signature from the TXT record and extracts the public key from the certificate in the TLSA record to verify the emblem.~~
 
 ### Pending changes to the Workflow
+
 1. The authorizer will need to be a CA and to authenticate/sign digital emblems by issuing an EE-certificate to the
 requestor and signing it. 
 2. Since both initial issuance of EE-certificates and their periodic renewal/reissuance will be
@@ -33,8 +34,6 @@ common occurrences, this process will need to be automated. This branch will imp
 Automatic Certificate Management Environment (ACME) as originally specified in
 [rfc8555](https://www.rfc-editor.org/rfc/rfc8555). The use of Javascript Web Tokens (JWT) authentication as originally defined will be replaced by the [`dns-01`](https://www.rfc-editor.org/rfc/rfc8555#section-8.4) challenge-response
 procedure defined in RFC 8555 §8.4.
-
-
 
 ## Installation
 
@@ -115,8 +114,8 @@ Here is an overview of the usage of all the files and the order you would run th
     - \<RD\>_priv.key.pem - private key PEM
     - \<RD\>_pub.key.pem - public key PEM
 
-
 ## Publishing DNS Records Manually
+
 To publish the records with the .jhuapl.org domain, you need to set up an Infoblox account with ITSD. Once on Infoblox click on Data Management -> DNS -> External -> jhuapl.org. Then on the right toolbar, click the drop-down menu next to Add -> Record and pick either TLSA or TXT Record.
 
 ### Approver CA TLSA Record
@@ -136,7 +135,6 @@ Assuming the current AD is `_443._tcp.2.icrc.jhuapl.org`:
 ### Requestor EE TLSA Record
 
 *TODO*
-
 
 ## Future Steps
 
