@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 
 import binascii
-import ipaddress
 from datetime import datetime, timedelta, timezone
 from common import crypto_root, CURRENT_APPROVER_PATH,ee_cert_params,ca_cert_params
-#from default-params.ee_params import #TODO: define params and add them here
+#from default_params.ee_params import #TODO: define params and add them here
 from cryptography import x509
-from cryptography.x509.oid import NameOID
-from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.serialization import Encoding, PrivateFormat, PublicFormat, NoEncryption
-from cryptography.hazmat.primitives.asymmetric import rsa
 from pathlib import Path
-import pickle
 import random
 import plac
 

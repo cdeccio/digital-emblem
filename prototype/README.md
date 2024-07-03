@@ -14,10 +14,13 @@ CyberNorms is funded internally accross AOS and NSAD. The goal of the project is
 
 ## Workflow
 
- ____NOTE: Since the original workflow section was written, it was determined that the requestor would publish a TLSA
- record referring to an EE-cert signed by the approver (CA) in-lieu of a signed TXT record.____
- __In light of this, the workflow is currently undegoing several changes [listed below](#pending-changes-to-the-workflow)__
+> [!NOTE]
+> **Since the original workflow section was written, it was determined that the requestor would publish a TLSA
+record referring to an EE-cert signed by the approver (CA) in-lieu of a signed TXT record.**
+> **In light of this, the workflow is currently undegoing several changes [listed below](#pending-changes-to-the-workflow).**
+
 ![](assets/acme-workflow-general.svg)
+
 1. Publish the approver's domain in a TLSA record. The data of the TLSA record will be a certificate containing the approver's public key and signed by their private key.
 2. ~~Requester sends their domain and justification to receive and display the emblem~~
 3. ~~Approver generates a nonce and signs the nonce and requester domain~~
@@ -65,13 +68,13 @@ Then install [Poetry dependency manager](https://python-poetry.org) as follows:
 
 Get the project and initialize the environment:
 ```bash
-git clone git@gitlab.jhuapl.edu:cybernorms/dns-emblem.git
-cd dns-emblem
+git clone https://github.com/bkhabs/digital-emblem.git
+cd digital-emblem/prototype
 poetry config virtualenvs.in-project true   # changes venv location to project root
 poetry env use python3.11   # specifies homebrewed python and creates virtual env with this interpreter
 ```
 
-If running on an APLNIS host, the following must also be run to bypass SSL verification errors:
+If running on JHUAPL internal network or other corporate intranet, the following must also be run to bypass SSL verification errors:
 ```bash
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 poetry source add pypi
@@ -100,17 +103,17 @@ Here is an overview of the usage of all the files and the order you would run th
 
 - [`./tlsarecord.py`](tlsarecord.py) can be run in two modes:
    
-  - `./tlsarecord.py isCA` creates the CA certificate for the approver domain (AD), which is currently _443._tcp.#.icrc.jhuapl.org, where `#` is determined by the [ca-cert counter](./ca-cert/counter.txt). This should be published to a TLSA record for the AD (as explained [below](#approver-ca-tlsa-record)). There will be 4 files generated:
+  - `./tlsarecord.py isCA` creates the CA certificate for the approver domain (AD), which is currently `_443._tcp.#.icrc.jhuapl.org`, where `#` is determined by the [ca-cert counter](./ca-cert/counter.txt). This should be published to a TLSA record for the AD (as explained [below](#approver-ca-tlsa-record)). There will be 4 files generated:
   
     - \<AD\>_cert.pem - certificate PEM
     - \<AD\>_cert.hex - certificate bytes represented as hex string
     - \<AD\>_priv.key.pem - private key PEM
     - \<AD\>_pub.key.pem - public key PEM
   
-  - `./tlsarecord.py` creates the EE CSR (certificate signing request) for the requestor domain (RD), which is currently _443._tcp.#.rescue.icrc-external.jhuapl.org, where `#` is determined by the [ee-cert counter](./ee-cert/counter.txt). This should be published to a TLSA record for the RD. There will be 4 files generated:
+  - `./tlsarecord.py` creates the EE CSR (certificate signing request) for the requestor domain (RD), which is currently `_443._tcp.#.rescue.icrc-external.jhuapl.org`, where `#` is determined by the [ee-cert counter](./ee-cert/counter.txt). This should be published to a TLSA record for the RD. There will be 4 files generated:
   
-    - \<RD\>_csr.pem - certificate PEM
-    - \<RD\>_csr.hex - certificate bytes represented as hex string
+    - \<RD\>_csr.pem - CSR PEM
+    - \<RD\>_csr.hex - CSR bytes represented as hex string
     - \<RD\>_priv.key.pem - private key PEM
     - \<RD\>_pub.key.pem - public key PEM
 
@@ -130,7 +133,7 @@ Assuming the current AD is `_443._tcp.2.icrc.jhuapl.org`:
 | Certificate Usage | DANE-EE |
 | Selector | Full certificate |
 | Matched Type | No hash |
-| Certificate Data | *paste the contents of [\<AD\>_cert.hex](crypto/_443._tcp.2.icrc.jhuapl.org_cert.hex) here* |
+| Certificate Data | *paste the contents of \<AD\>_cert.hex (located at crypto/_443._tcp.2.icrc.jhuapl.org_cert.hex) here* |
 
 ### Requestor EE TLSA Record
 
