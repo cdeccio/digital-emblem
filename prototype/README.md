@@ -4,8 +4,9 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Publishing DNS Records Manually](#publishing-dns-records-manually)
-    - [Approver CA TLSA Record](#approver-ca-tlsa-record)
-    - [Requestor EE TLSA Record](#requestor-ee-tlsa-record)
+    - [Infoblox](#infoblox)
+      - [Approver CA TLSA Record](#approver-ca-tlsa-record)
+      - [Requestor EE TLSA Record](#requestor-ee-tlsa-record)
   - [Future Steps](#future-steps)
 
 # DNS Digital Emblem
@@ -119,9 +120,11 @@ Here is an overview of the usage of all the files and the order you would run th
 
 ## Publishing DNS Records Manually
 
-To publish the records with the .jhuapl.org domain, you need to set up an Infoblox account with ITSD. Once on Infoblox click on Data Management -> DNS -> External -> jhuapl.org. Then on the right toolbar, click the drop-down menu next to Add -> Record and pick either TLSA or TXT Record.
+### Infoblox
 
-### Approver CA TLSA Record
+From the Infoblox web UI, click on Data Management -> DNS -> External -> jhuapl.org. Then on the right toolbar, click the drop-down menu next to Add -> Record and pick TLSA Record.
+
+#### Approver CA TLSA Record
 
 Assuming the current AD is `_443._tcp.2.icrc.jhuapl.org`:
 
@@ -135,7 +138,7 @@ Assuming the current AD is `_443._tcp.2.icrc.jhuapl.org`:
 | Matched Type | No hash |
 | Certificate Data | *paste the contents of \<AD\>_cert.hex (located at crypto/_443._tcp.2.icrc.jhuapl.org_cert.hex) here* |
 
-### Requestor EE TLSA Record
+#### Requestor EE TLSA Record
 
 *TODO*
 
