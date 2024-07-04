@@ -10,7 +10,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-cryptography = "^41.0.4"
+cryptography = "~42.0.4"
 plac = "^1.4.0"
 
 [[tool.poetry.source]]
