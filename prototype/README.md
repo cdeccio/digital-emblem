@@ -1,5 +1,5 @@
 - [DNS Digital Emblem](#dns-digital-emblem)
-  - [Components](#components)
+  - [Components](#parts-of-the-process-and-their-corresponding-components)
   - [Workflow](#workflow)
     - [Pending changes to the Workflow](#pending-changes-to-the-workflow)
   - [Installation](#installation)
@@ -23,9 +23,12 @@ Simplified diagrams of both authentication processes are given below.
 
 ![](assets/DNSSecAuth-TwoLines.png)
 
-## Components
-- __Acme Server__: To be controlled by Approver 
-- __Acme Client__: To be controlled by Requestor
+## Parts of the process and their corresponding components
+_Implementation details for each of these can be found in []() `//TODO ADD section with implementation details`
+- ___(Digital Emblem) Certificate Issuance and Renewal___
+  - __Acme Server__: To be controlled by Approver 
+  - __Acme Client__: To be controlled by Requestor
+    - Requestor will also need control of the domain for which they will request the digital emblem be issued.
 
 
 
