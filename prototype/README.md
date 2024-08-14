@@ -1,4 +1,5 @@
 - [DNS Digital Emblem](#dns-digital-emblem)
+  - [Components](#components)
   - [Workflow](#workflow)
     - [Pending changes to the Workflow](#pending-changes-to-the-workflow)
   - [Installation](#installation)
@@ -16,7 +17,7 @@ This implementation uses DNSSec, specifically TLSA DANE (RFC 6698) to authentica
 The end goal is to enable authentication for both the simpler case where the Requestor resides in a sub-zone controlled by the Approver as well as one where the Approver's domain name resides in a different zone than the Requestor (as may be the case in countries like the United States). 
 
 
-
+![](assets/DNSSecAuth-SingleLine.png)
 
 
 ## Components
