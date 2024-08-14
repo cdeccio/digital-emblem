@@ -11,7 +11,19 @@
 
 # DNS Digital Emblem
 
-CyberNorms is funded internally accross AOS and NSAD. The goal of the project is to support humanitarian and relief organizations as well as establishing internet standards. The digital emblem serves as an indicator to malicious parties that the ICRC, or any hospital, is a non-partisan entity and is just trying to help people.
+~~CyberNorms is funded internally accross AOS and NSAD.~~ The goal of the project is to support humanitarian and relief organizations as well as establishing internet standards. The digital emblem serves as an indicator to malicious parties that the ICRC, or any hospital, is a non-partisan entity and is just trying to help people.
+This implementation uses DNSSec, specifically TLSA DANE (RFC 6698) to authenticate digital emblems which entities entitled to protections under international law can display signed attestations of their (respective) identities and protected status.
+The end goal is to enable authentication for both the simpler case where the Requestor resides in a sub-zone controlled by the Approver as well as one where the Approver's domain name resides in a different zone than the Requestor (as may be the case in countries like the United States). 
+
+
+
+
+
+## Components
+- __Acme Server__: To be controlled by Approver 
+- __Acme Client__: To be controlled by Requestor
+
+
 
 ## Workflow
 
