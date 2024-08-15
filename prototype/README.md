@@ -23,12 +23,19 @@ Simplified diagrams of both authentication processes are given below.
 
 ![](assets/DNSSecAuth-TwoLines.png)
 
-## Parts of the process and their corresponding components
-_Implementation details for each of these can be found in []() `//TODO ADD section with implementation details`
+## Parts of the process, their corresponding components and implementation details
 - ___(Digital Emblem) Certificate Issuance and Renewal___
-  - __Acme Server__: To be controlled by Approver 
+  - __Acme Server__: To be controlled by Approver
+    - Location: APL VM
+    - Acme software implementation: [step-ca](https://github.com/smallstep/certificates) (installed from source code)
+      - Implementation language: GoLang
   - __Acme Client__: To be controlled by Requestor
-    - Requestor will also need control of the domain for which they will request the digital emblem be issued.
+    - (Planned) location: PCH VM (test)
+    - (intended) software implementation: [go-acme/lego](https://go-acme.github.io/lego) (Let's Encrypt/Acme Library written in GoLang)
+- ___DNS NS (RR) management___
+  - __Requestor__:
+    - (planned) Location: PCH VM (test)
+    - (intended) software implementation: TBD
 
 
 
