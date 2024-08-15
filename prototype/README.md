@@ -1,5 +1,5 @@
 - [DNS Digital Emblem](#dns-digital-emblem)
-  - [Components](#parts-of-the-process-and-their-corresponding-components)
+  - [Components](#parts-of-the-process-,-their-corresponding-components-and-implementation-details)
   - [Workflow](#workflow)
     - [Pending changes to the Workflow](#pending-changes-to-the-workflow)
   - [Installation](#installation)
