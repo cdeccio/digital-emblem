@@ -3,7 +3,7 @@
 Internation law defines a number of emblems as indicators of special protections
 or handling. These emblems signal protection for people, objects, and locations.
 The physical enstantiations of these emblems have a number of limitations that have
-developed as technology advances and newer capabilities have become available. The
+emerged as technology advances and newer capabilities have become available. The
 Digital Emblem (DIEM) working group will focus on the developing capabilities that
 augment the existing emblem and extend their reach into the digital realm.
 
@@ -26,10 +26,10 @@ Some of those limitations include:
 
 The preliminary [problem statement](https://datatracker.ietf.org/doc/draft-haberman-digital-emblem-ps/)
 documents a number of potential use cases. The working group will explore those use cases to
-identify the functionality capabilities that are common to a large subset of those use cases.
+identify the functional capabilities that are common to a large subset of those use cases.
 The working group will:
 
- * Coordinate with stakeholders on the development of any additional requirements.
+ * Collaborate with external stakeholders on the development of any additional requirements.
  * Coordinate with other IETF working groups on the re-use of existing efforts to satisfy DIEM requirmeents.
  * Develop new capabilities to satisfy requirements not covered by existing IETF technologies.
 
