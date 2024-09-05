@@ -1,10 +1,10 @@
 # Introduction
 
-International law defines a number of emblems as indicators of special protections
+Internation law defines a number of emblems as indicators of special protections
 or handling. These emblems signal protection for people, objects, and locations.
-The physical instantiations of these emblems have a number of limitations that have
-emerged as technology advances and newer capabilities have become available. ALTERNATIVE TO PREVIOUS SENTENCE: As technology advances and new capabilities become available, the goal has emerged of complementing physical emblems with digital ones. The
-Digital Emblem (DIEM) working group will focus on the developing capabilities that
+As technology advances and new capabilities become available, the goal has emerged
+of complementing physical emblems with digital ones. The Digital Emblem (DIEM)
+working group will focus on the developing capabilities that
 augment the existing emblem and extend their reach into the digital realm.
 
 # Problem Statement
@@ -13,14 +13,14 @@ Physical emblems have served a number of key functions over hundreds of years.
 The design/use of those physical emblems were limited by the available resources
 and capabilities during the time of their inceptions.  As technology advances and
 newer capabilities become available, it is beneficial to examine limitations with
-existing emblems and identify REPLACE "potential needs" WITH "enhancements" going forward.
+existing emblems and identify enhancements going forward.
 
-Some of those REPLACE "limitations" WITH "enhancements" include:
+Some of those enhancements include:
 
- * Authenticity - Emblems currently do not carry any type of attestation to the validity of the emblem  ADD ", but this is possible in a digital emblem"
- * Visibility - Emblems are not always visible to observing parties.
+ * Authenticity - Emblems currently do not carry any type of attestation to the validity of the emblem, but this is possible in a digital emblem.
+ * Visibility - Emblems are not always visible to observing parties, but digital emblems can observed in a myriad of ways.
  * Mis-use - Emblems do not provide sufficient context to indicate the validity of their observed use.
- * Management - Emblems cannot currently be revoked REPLACE "due to" with "to address" abuse, compromise, or expiry.
+ * Management - Emblems cannot currently be revoked to address abuse, compromise, or expiry.
 
 # Goals
 
@@ -35,10 +35,9 @@ The working group will:
 
 # Program of Work
 
-Documents produced by the working group will address  COULD DELETE "one or more of" the following topics.
+Documents produced by the working group will address one or more of the following topics.
 
- 1. In-depth development and analysis of requirements.
- 2. Security framework for digital emblems.
- 3. Solutions that satisfy requirements and security needs for target use cases.
-
-COMMENT: how about adding before 1, "Identication of representative use cases embracing the range of potential needs, but allowing the WG to produce actionable work within a practical timeframe"?
+ 1. Identification of representative use cases embracing the range of potential needs.
+ 2. Collection and analysis of requirements.
+ 3. Analysis of the security needs for digital emblems.
+ 4. Development of solutions that satisfy requirements and security needs for targe use cases.
