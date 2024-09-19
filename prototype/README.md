@@ -1,5 +1,6 @@
 - [DNS Digital Emblem](#dns-digital-emblem)
-  - [Components](#parts-of-the-process-,-their-corresponding-components-and-implementation-details)
+    - [Single Line of Authentication](#single-line-of-authentication)
+  - [Parts of the process, their corresponding components and implementation details](#parts-of-the-process-their-corresponding-components-and-implementation-details)
   - [Workflow](#workflow)
     - [Pending changes to the Workflow](#pending-changes-to-the-workflow)
   - [Installation](#installation)
@@ -114,6 +115,9 @@ Now get the required dependencies:
 ```bash
 poetry install
 ```
+
+> [!NOTE]
+> If dependencies are already installed, run `poetry update` instead of `poetry install`.
 
 Finally enter the poetry virtual env subshell:
 ```bash
