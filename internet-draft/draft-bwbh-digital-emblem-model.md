@@ -1,7 +1,7 @@
 ---
 title: Conceptual Model for Digitized Emblems
 abbrev: Digital Emblem Models
-docname: draft-bwbh-digital-emblem-model-00
+docname: draft-bwbh-digital-emblem-model-01
 category: info
 
 ipr: trust200902
@@ -20,6 +20,11 @@ author:
     ins: B. Haberman
     org: Johns Hopkins University
     email: brian@innovationslab.net
+ -
+    name: Casey Deccio
+    ins: C. Deccio
+    org: Brigham Young University
+    email: casey@byu.edu
 
 normative:
   RFC2119:
@@ -30,7 +35,7 @@ informative:
     
 --- abstract
 
-This document describes the conceptual models of use for digial emblems.
+This document describes the conceptual models of use for digital emblems.
 --- middle
 
 # Introduction
@@ -64,6 +69,36 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted
 as described in BCP 14 {{RFC2119}}{{RFC8174}} when, and only when, they appear in all capitals,
 as shown here.
+
+## Terminology
+
+ - *Asset:* A person, place, or thing that is designated by a state or other
+   recognized entity as having certain legal protections.
+
+ - *Digital Emblem.*  A digital embodiment of the protections granted for an
+	 asset, consisting of attributes that definitively describe the asset using
+	 electronic means.  These attributes collectively associate the emblem to the
+   asset based on legal or similar normative framework and inform recipients
+   of the emblem as to how they should treat the asset.
+
+ - *Authenticity:* A characteristic that demonstrates a) the positive
+   association between a digital emblem to the asset that it describes, using
+	 its attributes and b) that the digital emblem itself is the original and has
+   not been tampered with.
+
+ - *Authorization:* The act of granting legitimacy to the creation of a digital
+   emblem for an asset, either directly by an entity that is officially
+	 recognized to do so, or indirectly, by an entity that has been recognized by
+   an already-recognized entity.
+
+ - *Validation:* The act of verifying both the authenticity and authorization
+	 of a digital emblem using one or more ultimately trusted sources as the
+   root(s) for authenticity and/or authorization.
+
+ - *Issuer:* The entity that has created a digital emblem.
+
+ - *Validator:* An entity performing validation of a digital emblem.
+
 
 # Digital Emblems Roles & Relationships
 
